@@ -30,3 +30,7 @@ def sil(request):
         sil = Todo.objects.get(id = id)
         sil.delete()
     return redirect('index')
+
+def todo_detay(request,slug):
+
+    return render(request,'tododetay.html')

@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index,name='index'),
     path('sil/',sil,name='sil'),
+    path('todo-detay/<slug:slug>/',todo_detay,name='todo-detay'),
     path('',include('user.urls'))
 ]

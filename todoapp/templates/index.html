@@ -32,7 +32,9 @@
 
         {% for i in todo %}
         <div class="d-flex justify-content-between p-2 m-auto mt-5 border border-1 w-50">
-            <p>{{i.todo}}</p>
+            <p></p>
+            {% comment %} <a href="{% url 'todo-detay' i.slug %}">{{i.todo}}</a> {% endcomment %}
+            <a href="{{i.get_absolute_url}}">{{i.todo}}</a>
             <div>
                 <form method="POST" action="{% url 'sil' %}">
                     {% csrf_token %}
